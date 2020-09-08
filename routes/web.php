@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/login', 'LoginController@index');
+Route::post('/login', ['uses'=>'LoginController@verify']);
+Route::get('/logout', ['uses'=>'logoutController@index']);
+Route::get('/signup', ['uses'=>'SignupController@index']);
+Route::get('/admin', 'AdminController@index');
+
+Route::middleware(['sess'])->group(function()
+{
+
+
+
+
+
+
+
+
+
+});
